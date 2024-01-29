@@ -24,13 +24,13 @@ export default function ShoppingPage() {
 			>
 				<ProductCard product={product}>
 					<ProductCard.Image />
-					<ProductCard.Title title="Cafe" />
+					<ProductCard.Title title="Cafe compound 1" />
                     <ProductCard.Buttons />
 				</ProductCard>
-                
+
 				<ProductCard product={product}>
 					<ProductImage />
-					<ProductTitle title="Cafe" />
+					<ProductTitle title="Cafe compound 2" />
 					<ProductButtons />
 				</ProductCard>
 			</div>
