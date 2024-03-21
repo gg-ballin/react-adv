@@ -20,3 +20,8 @@ export interface ProductCardHOCProps {
 	Image: (Props: ProductImageProps) => ReactElement;
 	Buttons: (Props: ProductButtonsProps) => ReactElement;
 }
+
+export interface onChangeArgs {
+	product: Product;
+	count: number;
+}
