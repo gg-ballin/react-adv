@@ -15,7 +15,6 @@ export interface ProductInCart extends Product {
 
 export default function ShoppingPage() {
 	const { onProductCountChange, products, shoppingCart } = useShoppingCart();
-
 	return (
 		<div>
 			<h1>ShoppingPage</h1>
@@ -64,9 +63,6 @@ export default function ShoppingPage() {
 						<ProductButtons className="custom-buttons" />
 					</ProductCard>
 				))}
-			</div>
-			<div>
-				<code>{JSON.stringify(shoppingCart, null, 5)}</code>
 			</div>
 		</div>
 	);
