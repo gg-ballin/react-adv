@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { ProductInCart } from "../pages/ShoppingPage";
-import { onChangeArgs } from "../interfaces/interfaces";
+import { Product, onChangeArgs } from "../interfaces/interfaces";
 import { products } from "../data/products";
+
+interface ProductInCart extends Product {
+	count: number;
+}
 
 export const useShoppingCart = () => {
 	const [shoppingCart, setShoppingCart] = useState<{

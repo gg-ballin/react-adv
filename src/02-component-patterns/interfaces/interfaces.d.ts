@@ -3,15 +3,16 @@ import { Props as ProductTitleProps } from "../components/ProductCard/ProductEle
 import { Props as ProductImageProps } from "../components/ProductCard/ProductElements/ProductImage";
 import { Props as ProductButtonsProps } from "../components/ProductCard/ProductElements/ProductButtons";
 
-export interface ProcuctContextProps {
-	counter: number;
-	increaseBy: (value: number) => void;
-	product: Product;
-}
 export interface Product {
 	id: string;
 	title: string;
 	img?: string;
+}
+export interface ProductContextProps {
+	counter: number;
+	maxCount?: number;
+	product: Product;
+	increaseBy: (value: number) => void;
 }
 
 export interface ProductCardHOCProps {
@@ -24,4 +25,18 @@ export interface ProductCardHOCProps {
 export interface onChangeArgs {
 	product: Product;
 	count: number;
+}
+
+export interface InitialValues {
+	count?: number;
+	maxCount?: number;
+}
+
+export interface ProductCardHandlers {
+	count: number;
+	isMaxCountReached: boolean;
+	maxCount?: number;
+	product: Product;
+	increaseBy: (value: number) => void;
+	reset: () => void;
 }
